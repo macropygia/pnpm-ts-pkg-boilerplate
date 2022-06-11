@@ -1,0 +1,36 @@
+{
+  "name": "@namespace/sample-package1",
+  "version": "0.0.0",
+  "description": "<package-description>",
+  "author": "<author-name>",
+  "license": "<license>",
+  "homepage": "https://github.com/<github-username>/<repository-name>/tree/main/packages/<package-name>#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/<github-username>/<repository-name>.git",
+    "directory": "packages/<package-name>"
+  },
+  "bugs": {
+    "url": "https://github.com/<github-username>/<repository-name>/issues"
+  },
+  "keywords": [],
+  "files": [
+    "./dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "type-check": "tsc --noEmit -p .",
+    "clean": "rimraf ./dist",
+    "tsup": "tsup src/index.ts --dts --format esm,cjs",
+    "build": "pnpm clean && pnpm tsup"
+  }
+}
