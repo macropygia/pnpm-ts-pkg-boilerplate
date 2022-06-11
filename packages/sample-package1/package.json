@@ -29,6 +29,7 @@
   },
   "scripts": {
     "type-check": "tsc --noEmit -p .",
+    "typedoc": "typedoc src/index.ts",
     "clean": "rimraf ./dist",
     "tsup": "tsup src/index.ts --dts --format esm,cjs",
     "build": "pnpm clean && pnpm tsup"
