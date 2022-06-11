@@ -15,7 +15,7 @@
   },
   "keywords": [],
   "files": [
-    "./dist"
+    "dist"
   ],
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
